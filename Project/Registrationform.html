@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistrationForm</title>
+
+    <link rel="stylesheet" href="css/registration.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="js/registrationform.js"></script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* background: linear-gradient(135deg, rgba(188, 34, 195, 1) 0%, rgba(16, 130, 226, 1) 100%); */
+        /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,199,1) 35%, rgba(54,155,176,1) 100%); */
+background: rgb(131,58,180);
+background: linear-gradient(115deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .container {
+        max-width: 1000px;
+        width: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+    }
+
+    .container form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    form .user-details .input-box {
+        margin: 20px 0px 12px 0px;
+        width: calc(100% / 2 - 20px);
+    }
+
+    .user-details .input-box .details {
+        display: block;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+    }
+
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 14px 0px;
+        justify-content: space-between;
+    }
+
+    /* form .gender-details .category{
+    display: flex;
+    width: 80%;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;    
+}
+ */
+    .category .gender-title {
+        padding-right: 20px;
+    }
+
+    .button input {
+        margin-top: 10px;
+        font-size: 30px;
+        width: 100%;
+        margin-left: 15px;
+        /* background: linear-gradient(rgba(16,130,226,1) 0%, rgba(188,34,195,1) 100%,); */
+    }
+
+    .button {
+        color: linear-gradient(135deg, rgba(16, 130, 226, 1) 0%, rgba(188, 34, 195, 1) 100%, );
+    }
+
+    .gender-title label {
+        margin-right: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" id="uname" placeholder="Enter UserName">
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="number" id="phoneno" placeholder="Enter Phone number">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" id="password" placeholder="Enter Your Password">
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" id="confirmp" placeholder="Confirm Your Password">
+                </div>
+                <div class="gender-details">
+                    <div class="gender-title">Gender</div>
+                    <!-- <div class="category">
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="">
+                            <span class="dot-one"></span>
+                            <span class="gender">Prefer Not To Say</span>
+                        </label> -->
+                    <input type="radio"  name="gender" id="r1" value="Male">Male
+                    <input type="radio"  name="gender" id="r2" value="Female">female
+                    <input type="radio"  name="gender" id="r3" value="Prefer not to say">Prefer not to say
+                    <!-- <label for="Male">Male</label> -->
+<!-- 
+                    <input name="gender" type="radio">
+                    <label for="Female">Female</label>
+
+
+                    <input name="gender" type="radio">
+                    <label for="Perfer not to say">Prefer not to say</label> -->
+                </div>
+            </div>
+            <div onclick="submit()" class="button">
+                <input type="submit" value="Register">
+            </div>
+    </div>
+    </form>
+    </div>
+    <script>
+        // function submit() {
+        //     console.log('submit')
+
+        //     var fullname = document.getElementById('name').value;
+        //     npattern = /^[a-zA-Z ]+$/;
+        //     if (fullname == "") {
+        //         alert("Enter the Full name")
+        //     } else if (npattern.test(fullname)) {
+        //         alert("your name is  :" + fullname)
+        //     } else {
+        //         alert("Enter valid name")
+        //     }
+
+        //     var UserName = document.getElementById('uname').value;
+        //     upattern = /^[a-zA-Z0-9]+$/;
+        //     if (UserName == "") {
+        //         alert("Enter the user name")
+        //     } else if (upattern.test(UserName)) {
+        //         alert("Username is :" + UserName)
+        //     } else {
+        //         alert("Enter the valid username")
+        //     }
+
+        //     var email = document.getElementById('email').value;
+        //     epattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        //     if (email == "") {
+        //         alert("Enter the email")
+        //     } else if (epattern.test(email)) {
+        //         alert("Your email is :" + email)
+        //     } else {
+        //         alert("Enter the valid email")
+        //     }
+
+        //     var phoneno = document.getElementById('phoneno').value;
+        //     ppattern = /^\d{09}$/;
+        //     if (phoneno == "") {
+        //         alert("Enter the phone number")
+        //     } else if (ppattern.test(phoneno)) {
+        //         alert("Your phone no is :" + phoneno)
+        //     } else {
+        //         alert("Enter valid phone no")
+        //     }
+
+        //     var password = document.getElementById('password').value;
+        //     spattern = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        //     if (password == "") {
+        //         alert("Enter the password")
+        //     } else if (spattern.test(password)) {
+        //         alert("Your password is : " + password)
+        //     } else {
+        //         alert("Enter valid password")
+        //     }
+
+        //     var gender;
+        //     if(document.getElementById('r1').checked)
+        //     {
+        //         gender=document.getElementById('r1').value;
+        //     }else if(document.getElementById("r2").checked){
+        //         gender = document.getElementById("r2").value;
+        //     }else if(document.getElementById("r3").checked)
+        //     {
+        //         gender=document.getElementById("r3").value
+        //     }
+        //     console.log(gender)
+
+        //     fetch('http://localhost:8080/api/registrationForm/saveRegistration', {
+        //         method: 'POST',
+        //         body: JSON.stringify({
+        //             confirmPassword: document.getElementById("confirmp").value,
+        //             email: document.getElementById("email").value,
+        //             fullName: document.getElementById("name").value,
+        //             gender: gender,
+        //             password: document.getElementById("password").value,
+        //             phoneNumber: document.getElementById("phoneno").value,
+        //             userName: document.getElementById("uname").value
+        //         }),
+        //         headers: {
+        //             'Content-type': 'application/json; charset=UTF-8',
+        //         },
+        //     })
+        //         .then((response) => response.json())
+        //         .then((json) => console.log(json));
+
+
+            //     fetch('http://localhost:8080/api/registration1/saveRegistration1 ', {
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         confirmPassword: document.getElementById("confirmp").value,
+            //         email: document.getElementById("email").value,
+            //         fullName: document.getElementById("name").value,
+            //         gender: document.getElementsByClassName("gender-details").value,
+            //         password: document.getElementById("password").value,
+            //         phoneNumber: document.getElementById("phoneno").value,
+            //         userName: document.getElementById("uname").value
+            //     }),
+            //     headers: {
+            //         'Content-type': 'application/json; charset=UTF-8',
+            //     },
+            // })
+            //     .then((response) => response.json())
+            //     .then((json) => console.log(json));  
+            // } 
+
+            
+        
+    </script>
+</body>
+
+</html>
